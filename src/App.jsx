@@ -1,9 +1,18 @@
+import { Routes, Route, Navigate } from 'react-router-dom';
+import Home from '~/pages/Home/Home';
+import Login from '~/pages/Auth/Login';
+import Register from './pages/Auth/Register';
+
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-red-600">Quiz Master</h1>
-      <p>Welcome to the Quiz Master application!</p>
-    </div>
+    <Routes>
+      {/* Public routes */}
+      <Route path='/' element={<Navigate to='/home' replace={true} />} />
+      <Route path='/home' element={<Home />} />
+      <Route path='/login' element={<Login />} />
+      <Route path='/register' element={<Register />} />
+
+    </Routes>
   );
 }
 
