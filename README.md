@@ -1,12 +1,83 @@
-# React + Vite
+# Quiz Master Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web application for creating, administering, and participating in quizzes.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   Create, edit, and delete quizzes
+-   Participate in quizzes and view results
+-   Responsive and modern UI
+-   Fast performance with Vite
+-   Styled with Tailwind CSS
+-   Built using React
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-   [React](https://react.dev/) &mdash; for building the user interface
+-   [Vite](https://vitejs.dev/) &mdash; as the build tool and development server
+-   [Tailwind CSS](https://tailwindcss.com/) &mdash; for utility-first CSS styling
+
+## Getting Started
+
+### Prerequisites
+
+-   [Node.js](https://nodejs.org/) (version 16+ recommended)
+-   [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Installation
+
+1. **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/toanthienla/quiz-master-web.git
+    cd quiz-master-web
+    ```
+
+2. **Install dependencies:**
+
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+
+3. **Start the development server:**
+
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    ```
+
+4. **Open in your browser:**
+   Visit [http://localhost:5173](http://localhost:5173)
+
+### Building for Production
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+The production-ready files will be in the `dist/` directory.
+
+## Project Structure
+
+```
+quiz-master-web/
+│
+├── public/           # Static assets
+├── src/              # Source files
+│   ├── components/   # React components
+│   ├── pages/        # Page components
+│   ├── App.jsx       # Root app file
+│   └── main.jsx      # Entry point
+├── tailwind.config.js# Tailwind CSS configuration
+├── vite.config.js    # Vite configuration
+└── package.json
+```
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request.

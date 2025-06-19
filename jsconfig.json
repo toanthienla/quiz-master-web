@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "paths": {
+            // Vscode import path modify
+            "~/*": ["./src/*"]
+        }
+    }
+}

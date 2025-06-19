@@ -1,0 +1,44 @@
+{
+    "users": [
+        {
+            "fullName": "La Thiện Toàn",
+            "email": "toanlt.ce190713@gmail.com",
+            "studentId": "CE190713",
+            "username": "toanthienla",
+            "password": "toanlt.ce190713",
+            "img": "https://avatar.iran.liara.run/public/boy?username=toanthienla"
+        },
+        {
+            "fullName": "Phan Văn Hòa Thuận",
+            "email": "thuanpvhce181377@fpt.edu.vn",
+            "studentId": "CE181377",
+            "username": "ThunFan127",
+            "password": "thuanpvhce181377",
+            "img": "https://avatar.iran.liara.run/public/boy?username=ThunFan127"
+        },
+        {
+            "fullName": "Nguyễn Ngọc Hân",
+            "email": "hannnce180049@fpt.edu.vn",
+            "studentId": "CE180049",
+            "username": "hancontam",
+            "password": "hannnce180049",
+            "img": "https://avatar.iran.liara.run/public/girl?username=hancontam"
+        },
+        {
+            "fullName": "Huỳnh Phúc Thọ",
+            "email": "thohhpce181027FPT.edu.vn",
+            "studentId": "CE181027",
+            "username": "PTplaymusic",
+            "password": "thohhpce181027",
+            "img": "https://avatar.iran.liara.run/public/boy?username=PTplaymusic"
+        },
+        {
+            "fullName": "Quang Nhật Phi Yến",
+            "email": "yenqnpce181445@fpt.edu.vn",
+            "studentId": "CE181445",
+            "username": "phiyen2004",
+            "password": "yenqnpce181445",
+            "img": "https://avatar.iran.liara.run/public/girl?username=phiyen2004"
+        }
+    ]
+}
