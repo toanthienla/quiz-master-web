@@ -1,12 +1,16 @@
 import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
+import { useNavigate, Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { login } from "~/store/userSlice";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+
+  const dispatch = useDispatch();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -20,7 +24,7 @@ export default function Login() {
       );
 
       if (matchedUser) {
-        localStorage.setItem("user", JSON.stringify(matchedUser));
+        dispatch(login(matchedUser));
         navigate("/");
       } else {
         setError("Invalid email or password.");

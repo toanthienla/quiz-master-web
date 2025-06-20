@@ -1,6 +1,6 @@
 # Quiz Master Web
 
-A web application for creating, administering, and participating in quizzes.
+A web application for creating, administering, and participating in quizzes, developed as a project for the university subject **FER202**.
 
 ## Features
 
