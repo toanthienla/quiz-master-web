@@ -1,17 +1,44 @@
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, Outlet } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
 import Home from '~/pages/Home/Home';
 import Login from '~/pages/Auth/Login';
-import Register from './pages/Auth/Register';
+import Register from '~/pages/Auth/Register';
+import Profile from '~/pages/Profile/Profile';
+import Pricing from '~/pages/Pricing/Pricing';
+import Contact from '~/pages/Contact/Contact';
+import Guide from '~/pages/Guide/Guide';
+
+const AuthRoute = () => {
+  const user = useSelector((state) => state.user);
+  return user ? <Navigate to="/home" replace /> : <Outlet />;
+};
+
+const ProtectedRoute = () => {
+  const user = useSelector((state) => state.user);
+  return user ? <Outlet /> : <Navigate to="/login" replace />;
+};
 
 function App() {
   return (
     <Routes>
-      {/* Public routes */}
-      <Route path='/' element={<Navigate to='/home' replace={true} />} />
-      <Route path='/home' element={<Home />} />
-      <Route path='/login' element={<Login />} />
-      <Route path='/register' element={<Register />} />
+      {/* Public Routes */}
+      <Route path="/" element={<Navigate to="/home" replace />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/pricing" element={<Pricing />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/guide" element={<Guide />} />
 
+      {/* Authentication Routes */}
+      <Route element={<AuthRoute />}>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Route>
+
+      {/* Protected Routes */}
+      <Route element={<ProtectedRoute />}>
+        <Route path="/profile" element={<Profile />} />
+      </Route>
     </Routes>
   );
 }
