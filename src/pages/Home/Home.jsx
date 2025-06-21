@@ -14,7 +14,7 @@ export default function Home() {
       <Navbar user={user} />
 
       {/* Hero Section */}
-      <section className="bg-base-200/50 pt-50 pb-28">
+      <section className="bg-base-200/30 pt-50 pb-28">
         <HeroSection />
       </section>
 
@@ -29,7 +29,7 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-base-200/50 py-20">
+      <section className="bg-base-200/30 py-20">
         <FAQSection />
       </section>
 

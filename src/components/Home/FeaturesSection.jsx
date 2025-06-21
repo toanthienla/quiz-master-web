@@ -7,7 +7,7 @@ export default function FeaturesSection() {
 
   return (
     <section className="text-center">
-      <h2 className="text-3xl font-bold mb-6">Why Choose QuizMaster?</h2>
+      <h2 className="text-3xl font-bold mb-6 text-black">Why Choose QuizMaster?</h2>
       <div className="grid gap-6 md:grid-cols-3 px-4 max-w-5xl mx-auto">
         {features.map((f, i) => (
           <div key={i} className="p-6 bg-white shadow rounded-lg">

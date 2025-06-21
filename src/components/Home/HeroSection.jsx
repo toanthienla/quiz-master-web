@@ -3,7 +3,7 @@ export default function HeroSection() {
     <div className="flex items-center justify-center">
       <div className="hero-content text-center">
         <div className="max-w-md">
-          <h1 className="text-5xl font-bold">Ready for a Fun Quiz?</h1>
+          <h1 className="text-5xl font-bold text-black">Ready for a Fun Quiz?</h1>
           <p className="py-6">
             Dive into our brain-tickling quizzes and test your knowledge!
           </p>

@@ -4,6 +4,7 @@ import axios from "axios";
 import Navbar from "~/components/Navbar";
 import Footer from "~/components/Footer";
 import { updateUser } from "~/store/userSlice";
+import { API_BASE_URL } from "~/constants/constants";
 
 export default function Profile() {
   const user = useSelector((state) => state.user);
@@ -24,11 +25,11 @@ export default function Profile() {
 
   const handleSave = async () => {
     try {
-      await axios.patch(`http://localhost:3001/users/${user.id}`, formData);
+      await axios.patch(`${API_BASE_URL}/users/${user.id}`, formData);
       dispatch(updateUser(formData));
       alert("Profile updated successfully!");
     } catch (error) {
-      // eslint-disable-next-line no-console
+
       console.error("Error updating profile:", error);
     }
   };
@@ -39,7 +40,7 @@ export default function Profile() {
     <div className="flex flex-col min-h-screen">
       <Navbar user={user} />
 
-      <main className="flex-grow px-4 py-12 bg-base-200/50">
+      <main className="flex-grow px-4 py-12 bg-base-200/30">
         <h2 className="text-2xl font-bold text-center mb-8">Profile Settings</h2>
 
         <div className="max-w-xl mx-auto">
@@ -53,6 +54,7 @@ export default function Profile() {
                   value={formData[field]}
                   onChange={handleChange}
                   className="input input-bordered w-full"
+                  disabled={field === "email" || field === "studentId" ? true : false}
                 />
               </div>
             ))}

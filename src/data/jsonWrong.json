@@ -1,0 +1,90 @@
+[
+    {
+        "id": "1",
+        "title": "Java Basics Quiz",
+        "description": "Test your knowledge of basic Java programming concepts.",
+        "number_of_questions": 8,
+        "type": "Programming",
+        "questions": [
+            {
+                "question": "Which keyword is used to define a class in Java?",
+                "options": {
+                    "A": "function",
+                    "B": "def",
+                    "C": "class"
+                },
+                "correct_answer": "C"
+            },
+            {
+                "question": "Which of these is not a Java primitive data type?",
+                "options": {
+                    "A": "int",
+                    "B": "String",
+                    "C": "boolean",
+                    "D": "char"
+                },
+                "correct_answer": "B"
+            },
+            {
+                "question": "Which method is the entry point of a Java application?",
+                "options": {
+                    "A": "start()",
+                    "B": "run()",
+                    "C": "init()",
+                    "D": "main()"
+                },
+                "correct_answer": "D"
+            },
+            {
+                "question": "Which symbol is used to denote a single-line comment in Java?",
+                "options": {
+                    "A": "//",
+                    "B": "/*",
+                    "C": "#",
+                    "D": "<!--"
+                },
+                "correct_answer": "A"
+            },
+            {
+                "question": "What is the size of an int variable in Java?",
+                "options": {
+                    "A": "8 bits",
+                    "B": "16 bits",
+                    "C": "32 bits",
+                    "D": "64 bits"
+                },
+                "correct_answer": "C"
+            },
+            {
+                "question": "Which of the following is used to handle exceptions in Java?",
+                "options": {
+                    "A": "if-else",
+                    "B": "try-catch",
+                    "C": "for-loop",
+                    "D": "switch"
+                },
+                "correct_answer": "B"
+            },
+            {
+                "question": "Which keyword is used to inherit a class in Java?",
+                "options": {
+                    "A": "this",
+                    "B": "implements",
+                    "C": "extends",
+                    "D": "inherits"
+                },
+                "correct_answer": "C"
+            },
+            {
+                "question": "Which package contains the Scanner class in Java?",
+                "options": {
+                    "A": "java.io",
+                    "B": "java.util",
+                    "C": "java.net",
+                    "D": "java.lang"
+                },
+                "correct_answer": "B"
+            }
+        ]
+    }
+]

@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { login } from "~/store/userSlice";
+import { API_BASE_URL } from "~/constants/constants";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -16,7 +17,7 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      const res = await axios.get("http://localhost:3001/users");
+      const res = await axios.get(`${API_BASE_URL}/users`);
       const users = res.data;
 
       const matchedUser = users.find(
