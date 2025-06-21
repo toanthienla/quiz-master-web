@@ -41,10 +41,10 @@ export default function Navbar({ user }) {
             </div>
             <ul
               tabIndex={0}
-              className="menu  dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-md dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box"
             >
               <li className="pointer-events-none">
-                <div className="font-bold inline-block max-w-52 truncate">Hello, {user.fullName || user.username}</div>
+                <div className="font-bold text-nowrap">Hello, {user.fullName}</div>
               </li>
               <li>
                 <Link to="/profile">
@@ -73,11 +73,11 @@ export default function Navbar({ user }) {
           </label>
           <ul
             tabIndex={0}
-            className="menu dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-md dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box"
           >
             {isLoggedIn &&
               <li className="pointer-events-none">
-                <div className="font-bold inline-block max-w-52 truncate">Hello, {user.fullName || user.username}</div>
+                <div className="font-bold text-nowrap">Hello, {user.fullName || user.username}</div>
               </li>
             }
             <li><Link to="/">Home</Link></li>

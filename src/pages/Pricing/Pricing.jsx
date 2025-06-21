@@ -49,7 +49,7 @@ export default function Pricing() {
     <div className="flex flex-col min-h-screen">
       <Navbar user={user} />
 
-      <main className="flex-grow bg-base-200/50 py-12 px-4">
+      <main className="flex-grow bg-base-200/30 py-12 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl font-bold mb-4">Choose Your Plan</h1>
           <p className="text-gray-500 mb-10">Find the plan that fits your needs.</p>

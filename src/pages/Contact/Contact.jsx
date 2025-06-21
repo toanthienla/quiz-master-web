@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 import Navbar from "~/components/Navbar";
 import Footer from "~/components/Footer";
 import { useSelector } from "react-redux";
@@ -7,33 +8,33 @@ export default function Contact() {
   const user = useSelector((state) => state.user);
 
   const [form, setForm] = useState({
+    id: user?.id || "",
     name: user?.fullName || "",
     email: user?.email || "",
     message: ""
   });
-  const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Simulate sending
-    setStatus("Sending...");
-    setTimeout(() => {
-      setStatus("✅ Message sent successfully!");
-      setForm({ name: "", email: "", message: "" });
-    }, 1500);
+    try {
+      await axios.post("http://localhost:3001/contacts", form);
+      alert("Message sent successfully!");
+    } catch (error) {
+      console.error("Error sending message:", error);
+    }
   };
 
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar user={user} />
 
-      <main className="flex-grow bg-base-200/50 py-12 px-4">
+      <main className="flex-grow bg-base-200/30 py-12 px-4">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
           {/* Contact Info */}
           <div className="space-y-6">
@@ -85,9 +86,6 @@ export default function Contact() {
                 className="textarea textarea-bordered w-full"
               />
             </div>
-
-            {status && <p className="text-sm text-success text-center">{status}</p>}
-
             <button type="submit" className="btn btn-primary w-full text-white">
               Send Message
             </button>

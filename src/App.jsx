@@ -8,6 +8,8 @@ import Profile from '~/pages/Profile/Profile';
 import Pricing from '~/pages/Pricing/Pricing';
 import Contact from '~/pages/Contact/Contact';
 import Guide from '~/pages/Guide/Guide';
+import QuizList from '~/pages/Quiz/QuizList';
+import QuizDetail from '~/pages/Quiz/QuizDetail';
 
 const AuthRoute = () => {
   const user = useSelector((state) => state.user);
@@ -38,6 +40,8 @@ function App() {
       {/* Protected Routes */}
       <Route element={<ProtectedRoute />}>
         <Route path="/profile" element={<Profile />} />
+        <Route path="/quiz" element={<QuizList />} />
+        <Route path="/quiz/:id" element={<QuizDetail />} />
       </Route>
     </Routes>
   );

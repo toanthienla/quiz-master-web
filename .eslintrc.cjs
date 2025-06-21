@@ -30,7 +30,7 @@ module.exports = {
     ],
 
     // Common
-    'no-console': 1,
+    'no-console': 0,
     'no-lonely-if': 1,
     'no-unused-vars': 1,
     'no-trailing-spaces': 1,
@@ -47,6 +47,6 @@ module.exports = {
     'keyword-spacing': 1,
     'comma-dangle': 1,
     'comma-spacing': 1,
-    'arrow-spacing': 1,
+    'arrow-spacing': 1
   }
 };

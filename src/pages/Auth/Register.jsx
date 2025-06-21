@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { login } from "~/store/userSlice";
+import { API_BASE_URL } from "~/constants/constants";
 
 export default function Register() {
   const [fullName, setFullName] = useState("");
@@ -18,7 +19,7 @@ export default function Register() {
     e.preventDefault();
 
     try {
-      const response = await axios.get("http://localhost:3001/users");
+      const response = await axios.get(`${API_BASE_URL}/users`);
       const users = response.data;
 
       const emailExists = users.some((u) => u.email === email);
@@ -38,7 +39,7 @@ export default function Register() {
         img: `https://ui-avatars.com/api/?name=${encodeURIComponent(fullName)}&background=0069ff&color=fff`
       };
 
-      const created = await axios.post("http://localhost:3001/users", newUser);
+      const created = await axios.post(`${API_BASE_URL}/users`, newUser);
       dispatch(login(created.data));
       navigate("/home");
     } catch (err) {

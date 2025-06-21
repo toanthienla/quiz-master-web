@@ -1,7 +1,7 @@
 export default function HowItWorksSection() {
   return (
     <section className="text-center">
-      <h2 className="text-3xl font-bold mb-4">How It Works</h2>
+      <h2 className="text-3xl font-bold mb-4 text-black">How It Works</h2>
       <p className="mb-10 text-gray-500">Get started in 3 easy steps</p>
       <div className="flex flex-col md:flex-row justify-center gap-10 max-w-4xl mx-auto px-4">
         <div>
