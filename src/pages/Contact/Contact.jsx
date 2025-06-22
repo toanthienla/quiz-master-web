@@ -3,6 +3,7 @@ import axios from "axios";
 import Navbar from "~/components/Navbar";
 import Footer from "~/components/Footer";
 import { useSelector } from "react-redux";
+import { API_BASE_URL } from "~/constants/constants";
 
 export default function Contact() {
   const user = useSelector((state) => state.user);
@@ -23,7 +24,7 @@ export default function Contact() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:3001/contacts", form);
+      await axios.post(`${API_BASE_URL}/contacts"`, form);
       alert("Message sent successfully!");
     } catch (error) {
       console.error("Error sending message:", error);

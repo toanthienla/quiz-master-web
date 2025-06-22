@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { API_BASE_URL } from "~/constants/constants";
 
 export default function UploadQuiz() {
   const [uploadStatus, setUploadStatus] = useState("");
@@ -30,7 +31,6 @@ export default function UploadQuiz() {
         // Validate each quiz object
         for (let quiz of json) {
           const isValidQuiz =
-            typeof quiz.id === "string" &&
             typeof quiz.title === "string" &&
             typeof quiz.description === "string" &&
             typeof quiz.number_of_questions === "number" &&
@@ -64,10 +64,11 @@ export default function UploadQuiz() {
 
         // If validation passed, upload all quizzes
         for (let quiz of json) {
-          await axios.post("http://localhost:3001/quizzes", quiz);
+          await axios.post(`${API_BASE_URL}/quizzes`, quiz);
         }
 
         alert("✅ Quizzes uploaded successfully!");
+        window.location.reload();
         setFile(null);
       } catch (err) {
         console.error(err);

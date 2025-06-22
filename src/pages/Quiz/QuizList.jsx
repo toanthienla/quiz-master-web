@@ -5,6 +5,7 @@ import Navbar from "~/components/Navbar";
 import Footer from "~/components/Footer";
 import { useSelector } from "react-redux";
 import UploadQuiz from '~/pages/Quiz/UploadQuiz.jsx';
+import { API_BASE_URL } from "~/constants/constants";
 
 export default function QuizList() {
   const [quizzes, setQuizzes] = useState([]);
@@ -15,7 +16,7 @@ export default function QuizList() {
   }, []);
 
   const fetchQuizzes = () => {
-    axios.get("http://localhost:3001/quizzes")
+    axios.get(`${API_BASE_URL}/quizzes`)
       .then((res) => setQuizzes(res.data))
       .catch((err) => console.error("Error fetching quizzes:", err));
   };

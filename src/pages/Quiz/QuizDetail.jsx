@@ -5,6 +5,7 @@ import Navbar from "~/components/Navbar";
 import Footer from "~/components/Footer";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { API_BASE_URL } from "~/constants/constants";
 
 export default function QuizDetail() {
   const { id } = useParams();
@@ -18,7 +19,7 @@ export default function QuizDetail() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/quizzes/${id}`)
+    axios.get(`${API_BASE_URL}/quizzes/${id}`)
       .then((res) => {
         setQuiz(res.data);
         setStartTime(Date.now());
