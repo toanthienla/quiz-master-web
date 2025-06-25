@@ -1,27 +1,38 @@
 # Quiz Master Web
 
-A web application for creating, administering, and participating in quizzes, developed as a project for the university subject **FER202**.
+Developed for the university course **FER202**, Quiz Master Web offers a fast, modern, and responsive experience powered by React, Vite, and Tailwind CSS.
 
-## Features
+---
 
--   Create, edit, and delete quizzes
--   Participate in quizzes and view results
--   Responsive and modern UI
--   Fast performance with Vite
--   Styled with Tailwind CSS
--   Built using React
+## ✨ Features
 
-## Tech Stack
+-   **Create, edit, and delete quizzes**
+-   **Take quizzes and view results**
+-   **Responsive and accessible UI**
+-   **Modern design with Tailwind CSS & DaisyUI**
+-   **Global state management with Redux Toolkit**
+-   **Client-side routing with React Router**
+-   **Efficient API handling with Axios**
 
--   [React](https://react.dev/) &mdash; for building the user interface
--   [Vite](https://vitejs.dev/) &mdash; as the build tool and development server
--   [Tailwind CSS](https://tailwindcss.com/) &mdash; for utility-first CSS styling
+---
 
-## Getting Started
+## 🛠️ Tech Stack
+
+-   [React](https://react.dev/) & [React DOM](https://react.dev/)
+-   [Vite](https://vitejs.dev/) (with React & React SWC plugins)
+-   [Tailwind CSS](https://tailwindcss.com/) & [DaisyUI](https://daisyui.com/)
+-   [Redux Toolkit](https://redux-toolkit.js.org/) & [React Redux](https://react-redux.js.org/)
+-   [React Router DOM](https://reactrouter.com/)
+-   [Axios](https://axios-http.com/)
+-   [ESLint](https://eslint.org/) for code quality & [TypeScript types](https://www.typescriptlang.org/)
+
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
--   [Node.js](https://nodejs.org/) (version 16+ recommended)
+-   [Node.js](https://nodejs.org/) (v16+ recommended)
 -   [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
 ### Installation
@@ -49,35 +60,28 @@ A web application for creating, administering, and participating in quizzes, dev
     yarn dev
     ```
 
-4. **Open in your browser:**
+4. **Open your browser:**  
    Visit [http://localhost:5173](http://localhost:5173)
 
-### Building for Production
+---
 
-```bash
-npm run build
-# or
-yarn build
-```
-
-The production-ready files will be in the `dist/` directory.
-
-## Project Structure
+## 🏗️ Project Structure
 
 ```
 quiz-master-web/
 │
-├── public/           # Static assets
-├── src/              # Source files
-│   ├── components/   # React components
-│   ├── pages/        # Page components
-│   ├── App.jsx       # Root app file
-│   └── main.jsx      # Entry point
-├── tailwind.config.js# Tailwind CSS configuration
-├── vite.config.js    # Vite configuration
-└── package.json
+├── public/               # Static assets
+├── src/
+│   ├── components/       # React components
+│   ├── pages/            # Page components
+│   ├── store/            # Redux logic
+│   ├── constants/        # API base URLs and quiz schema
+│   ├── utils/            # Utility functions
+│   ├── App.jsx           # Root App component
+│   └── main.jsx          # Entry point
+│
+├── tailwind.config.js    # Tailwind CSS configuration
+├── vite.config.js        # Vite configuration
+├── package.json
+└── ...
 ```
-
-## Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request.
