@@ -4,10 +4,12 @@ import axios from "axios";
 import Navbar from "~/components/Navbar";
 import Footer from "~/components/Footer";
 import { API_BASE_URL } from "~/constants/constants";
+import { useSelector } from "react-redux";
 
 export default function EditQuiz() {
   const { id } = useParams();
   const navigate = useNavigate();
+  const user = useSelector((state) => state.user);
 
   const [quizJSON, setQuizJSON] = useState("");
   const [quizTitle, setQuizTitle] = useState("");
@@ -53,7 +55,7 @@ export default function EditQuiz() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
+      <Navbar user={user} />
       <main className="flex-grow bg-base-200/30 px-4 py-10">
         <div className="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow space-y-6">
           {/* Header Title */}
