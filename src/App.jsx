@@ -10,6 +10,7 @@ import Contact from '~/pages/Contact/Contact';
 import Guide from '~/pages/Guide/Guide';
 import QuizList from '~/pages/Quiz/QuizList';
 import QuizDetail from '~/pages/Quiz/QuizDetail';
+import EditQuiz from '~/pages/Quiz/EditQuiz';
 
 const AuthRoute = () => {
   const user = useSelector((state) => state.user);
@@ -42,6 +43,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/quiz" element={<QuizList />} />
         <Route path="/quiz/:id" element={<QuizDetail />} />
+        <Route path="/quiz/edit/:id" element={<EditQuiz />} />
       </Route>
     </Routes>
   );

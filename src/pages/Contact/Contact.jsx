@@ -24,7 +24,7 @@ export default function Contact() {
     e.preventDefault();
 
     try {
-      await axios.post(`${API_BASE_URL}/contacts"`, form);
+      await axios.post(`${API_BASE_URL}/contacts`, form);
       alert("Message sent successfully!");
     } catch (error) {
       console.error("Error sending message:", error);
